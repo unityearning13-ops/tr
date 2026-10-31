@@ -24,12 +24,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onApplyClick }) => {
                   Unity Earning
                 </span>
                 <span className="text-[10px] font-semibold text-blue-400 tracking-wider uppercase">
-                  E-learning Platform
+                  E-Learning Platform
                 </span>
               </div>
             </div>
             <p className="text-sm text-slate-400 max-w-md leading-relaxed">
-              Unity Earning E-learning Platform সাব-এডমিন রেজিস্ট্রেশন। সাব-এডমিন অ্যাকাউন্ট প্রোভাইড করা হবে।
+              ইউনিটি আর্নিং লার্নিং প্ল্যাটফর্ম সাব-এডমিন রেজিস্ট্রেশন। সাব-এডমিন অ্যাকাউন্ট প্রোভাইড করা হবে।
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onApplyClick }) => {
         </div>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
-          <p>© {new Date().getFullYear()} Unity Earning E-learning Platform. সর্বস্বত্ব সংরক্ষিত।</p>
+          <p>© {new Date().getFullYear()} Unity Earning E-Learning Platform. সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
 
       </div>

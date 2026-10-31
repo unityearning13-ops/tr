@@ -30,7 +30,22 @@ export const VacancySelector: React.FC<VacancySelectorProps> = ({
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4"
+        >
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-black shadow-sm mx-auto uppercase tracking-widest">
+            <Sparkles className="w-4 h-4 text-blue-600" />
+            <span>Official Rules & Guidelines</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight font-bengali">
+            টিম ট্রেইনার সকল শর্তাবলী ও কার্যক্রম
+          </h2>
+          <div className="w-24 h-1.5 bg-blue-600 rounded-full mx-auto"></div>
+        </motion.div>
 
         {/* Rules Card Container */}
         <div id="rules">
@@ -47,9 +62,13 @@ export const VacancySelector: React.FC<VacancySelectorProps> = ({
                 <div className="text-blue-600 font-bold text-[10px] uppercase tracking-[0.25em]">
                   Transparency First
                 </div>
-                <h3 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tighter font-bengali">
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tighter font-bengali">
                   নিয়োগ নির্দেশিকা ও নীতিমালা
                 </h3>
+              </div>
+              <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-slate-900 text-white shadow-xl shadow-slate-900/20 text-xs font-black uppercase tracking-widest">
+                <Sparkles className="w-4 h-4 text-blue-400" />
+                <span>১৪টি বিশেষ শর্ত</span>
               </div>
             </div>
 
@@ -71,39 +90,37 @@ export const VacancySelector: React.FC<VacancySelectorProps> = ({
                 return (
                   <motion.div 
                     key={item.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6, delay: idx * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                    className="p-6 sm:p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-[0_15px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_70px_rgba(37,99,235,0.12)] hover:border-blue-200 hover:-translate-y-2 transition-all duration-700 group relative overflow-hidden flex flex-col sm:flex-row gap-6 items-start sm:items-center"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.5, delay: idx * 0.05 }}
+                    className="p-6 sm:p-8 rounded-[2.25rem] bg-white border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(37,99,235,0.08)] hover:border-blue-200 hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col sm:flex-row gap-6 items-start sm:items-center"
                   >
-                    {/* Background Accent */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-blue-100/30 transition-colors duration-700" />
-                    
                     {/* Left: Indicator */}
-                    <div className="flex-shrink-0 relative z-10">
-                      <div className="w-16 h-16 rounded-3xl bg-slate-50 text-slate-400 flex items-center justify-center font-black text-2xl group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-2xl group-hover:shadow-blue-600/40 transition-all duration-700 relative border border-slate-100 group-hover:border-blue-600">
+                    <div className="flex-shrink-0 relative">
+                      <div className="w-16 h-16 rounded-3xl bg-slate-50 text-slate-400 flex items-center justify-center font-black text-2xl group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-xl group-hover:shadow-blue-600/30 transition-all duration-500 z-10 relative border border-slate-100 group-hover:border-blue-600">
                         {item.id}
                       </div>
+                      <div className="absolute -inset-2 rounded-[2rem] bg-blue-600/0 group-hover:bg-blue-600/5 blur-2xl transition-all duration-500"></div>
                     </div>
 
                     {/* Middle: Content */}
-                    <div className="flex-grow space-y-3 relative z-10">
+                    <div className="flex-grow space-y-3">
                       <div className="flex flex-wrap items-center gap-2.5">
-                        <span className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-[0.15em] border shadow-xs transition-colors duration-500 ${badge.bg}`}>
-                          <Icon className="w-4 h-4" />
+                        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-[10px] font-black uppercase tracking-widest border shadow-xs ${badge.bg}`}>
+                          <Icon className="w-3.5 h-3.5" />
                           <span>{badge.label}</span>
                         </span>
                       </div>
-                      <p className="text-[18px] sm:text-[22px] font-black text-slate-800 leading-[1.4] group-hover:text-slate-950 transition-colors duration-700 font-bengali tracking-tight">
+                      <p className="text-[17px] sm:text-[20px] font-black text-slate-800 leading-relaxed group-hover:text-slate-900 transition-colors duration-500 font-bengali">
                         {item.textBn}
                       </p>
                     </div>
 
-                    {/* Right: Status Icon */}
-                    <div className="hidden lg:flex shrink-0 opacity-0 group-hover:opacity-100 translate-x-8 group-hover:translate-x-0 transition-all duration-700 pr-2">
-                      <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shadow-inner border border-blue-100 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-700">
-                        <CheckCircle2 className="w-8 h-8" />
+                    {/* Right: Icon */}
+                    <div className="hidden lg:block opacity-0 group-hover:opacity-100 translate-x-6 group-hover:translate-x-0 transition-all duration-500 pr-2">
+                      <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-500 flex items-center justify-center shadow-inner border border-emerald-100">
+                        <CheckCircle2 className="w-7 h-7" />
                       </div>
                     </div>
                   </motion.div>

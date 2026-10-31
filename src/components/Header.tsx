@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, onApplyClick }) => {
               Unity Earning
             </span>
             <span className="text-[10px] font-semibold text-blue-600 tracking-wider uppercase">
-              E-learning Platform
+              E-Learning Platform
             </span>
           </div>
         </div>

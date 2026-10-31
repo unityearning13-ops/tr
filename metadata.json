@@ -1,6 +1,8 @@
 {
-  "name": "Unity Earning E-Learning Platform",
-  "description": "Official recruitment portal for Unity Earning E-Learning Platform Sub Admin and staff positions.",
+  "name": "Unity Earning E-learning Platform",
+  "description": "Official recruitment portal for Unity Earning E-learning Platform Sub Admin and staff positions.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

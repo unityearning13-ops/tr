@@ -28,8 +28,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onRulesClick, onAppl
             <span>Unity Earning Official Portal</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.12]">
-            ইউনিটি আর্নিং লার্নিং প্ল্যাটফর্ম <span className="text-blue-600">সাব-এডমিন রেজিস্ট্রেশন</span>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.15]">
+            Unity Earning E-Learning Platform <span className="text-blue-600">Sub-Admin Registration</span>
           </h1>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">

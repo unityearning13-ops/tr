@@ -50,6 +50,35 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onRulesClick, onAppl
             </button>
           </div>
 
+          {/* YouTube Video Embed with Instruction */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mt-10 sm:mt-12 max-w-3xl mx-auto w-full group"
+          >
+            <div className="mb-6 space-y-2">
+              <div className="flex items-center justify-center gap-2 text-blue-600 font-bold uppercase tracking-wider text-xs sm:text-sm">
+                <span className="w-8 h-[2px] bg-blue-600 rounded-full hidden sm:block"></span>
+                <span>নির্দেশনামূলক ভিডিও</span>
+                <span className="w-8 h-[2px] bg-blue-600 rounded-full hidden sm:block"></span>
+              </div>
+              <p className="text-slate-800 font-extrabold text-sm sm:text-lg">
+                রেজিস্ট্রেশন করার আগে সম্পূর্ণ ভিডিওটি অবশ্যই মনোযোগ সহকারে দেখে নিন
+              </p>
+            </div>
+            
+            <div className="relative aspect-video rounded-[2rem] overflow-hidden border-[6px] border-white shadow-2xl shadow-blue-900/15 group-hover:shadow-blue-900/25 transition-all duration-500 transform group-hover:scale-[1.01]">
+              <iframe
+                src="https://www.youtube.com/embed/eXVo50dtI9c"
+                title="Unity Earning Platform Sub-Admin Registration Guide"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </motion.div>
+
         </motion.div>
 
         {/* Feature Pills */}
